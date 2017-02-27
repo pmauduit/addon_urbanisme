@@ -9,10 +9,15 @@ proxy:
     - cadastrapp
   environment:
     - XMX=512M
+  extra_hosts:
+    - portail-test.sig.rennesmetropole.fr:10.26.10.8
 mapfishapp:
   environment:
     - XMX=1024M
-  build: mapfishapp
+  image: georchestra/mapfishapp
+  # directory relative to ${project.basedir}/target/docker
+  volumes:
+    - ../../src/addon/urbanisme:/etc/georchestra/mapfishapp/addons/urbanisme
 cadastrapp:
   build: cadastrapp
   environment:

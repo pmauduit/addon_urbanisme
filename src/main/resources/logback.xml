@@ -6,6 +6,8 @@
     </encoder>
   </appender>
 
+  <logger name="org.georchestra.urbanisme" level="DEBUG"/>
+
   <root level="WARN">
     <appender-ref ref="STDOUT" />
   </root>

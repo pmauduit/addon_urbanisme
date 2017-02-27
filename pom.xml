@@ -311,24 +311,6 @@
             </configuration>
           </execution>
           <execution>
-            <id>prepare-docker-mapfishapp</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/docker/mapfishapp/</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${project.build.directory}</directory>
-                  <includes>
-                    <include>/*addon.zip</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-          <execution>
             <id>prepare-docker-urbanisme</id>
             <phase>package</phase>
             <goals>
